@@ -19,13 +19,13 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": ">=5.4.0",
+    "php": ">=5.4.0"
   },
   "autoload": {
-    "psr-4": {
-      "App\\": "app/",
-      "Wythe\\":"wythe/"
-    }
+      "psr-4": {
+          "App\\": "app/",
+          "Wythe\\": "wythe/"
+      }
   },
   "config": {
     "process-timeout": 1800
