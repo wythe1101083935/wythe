@@ -12,5 +12,10 @@
  */
  namespace Wythe\System;
  class App extends Container{
- 	
+
+ 	public function __construct(){
+ 		
+ 	}
+
+
  }

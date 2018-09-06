@@ -62,7 +62,7 @@ class Container{
 		/*创建实例*/
 		}else{
 			/*存入参数*/
-			$this->with[] = $parameters;
+			$this->with = $parameters;
 			if(isset($this->bindings[$abstract])){
 				$concrete = $this->bindings[$abstract]['concrete'];
 			}else{
@@ -81,7 +81,7 @@ class Container{
 
 	/*
 	 +----------------------------------------------------------
-	 * 循环实例化有依赖的对象
+	 * 实例化有依赖的对象
 	 +----------------------------------------------------------
 	 * @param  ;
 	 +----------------------------------------------------------
@@ -123,8 +123,8 @@ class Container{
 			/*如果参数不是一个对象依赖*/
 			if(is_null($dependency->getClass())){
 				/*如果传入了参数*/
-				if(isset($this->$with[$dependency->name])){
-					$results[] = $this->$with[$dependency->name];
+				if(isset($this->with[$dependency->name])){
+					$results[] = $this->with[$dependency->name];
 				/*如果参数有默认值*/
 				}elseif($dependency->isDefaultValueAvailable()){
 					$results[] = $dependency->getDefaultValue();
